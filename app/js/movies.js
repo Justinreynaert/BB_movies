@@ -7,7 +7,7 @@ console.log('movies.js geladen');
 define([
     'jquery',
     'underscore',
-    'backbone'], function($,_,Backbone, films) {
+    'backbone'], function($,_,Backbone) {
 
     // MODEL: Film
 
