@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ladies at the Movies, Men in control</title>
+        <link href="css/movies.css" rel="stylesheet">
+        <link href="css/forms.css" rel="stylesheet">
+        <script data-main="js/main" src="bower_components/requirejs/require.js"></script>
+
+    <body>
+        <div class="container">
+            <h1>Ladies at the Movies, Men at Home (in Control)</h1>
+            <div id="films">
+            <form id="frmFilm">
+                    <div><label>titel</label><input type="text" id="titel" name="titel"/></div>
+                    <div><label>filmNr</label><input type="text" id="filmNr" name="filmNr"/></div>
+                    <div><label>beschrijving</label><textarea id="beschrijving" name="beschrijving"></textarea></div>
+                    <div><label>regisseur</label><input type="text" id="regisseur" name="regisseur"/></div>
+                    <div><label>genre</label><input type="text" id="genre" name="genre"/></div>
+                    <div><label>duurtijd</label><input type="text" id="duur" name="duur"/></div>
+                    <div><label>release datum</label><input type="date" id="release" name="release"/></div>
+                    <div>
+                        <label>Cast (vb: Robert De Niro, Jack Nicholson)</label>
+                        <input type="text" name="cast" title="gebruik een komma als afscheider" />
+                    </div>
+                    <div><label>cover image</label><input type="file" id="foto" name="foto"/></div>
+                    <div><label></label><button type="button" id="voegtoe">voeg toe</button></div>
+                </form>
+               
+                  <!-- film container -->
+                <h2>Film Overzicht</h2> 
+                <!-- <div id="filter"><label>Kies een genre</label></div> -->
+                <div class="lijst"></div>
+               </div>
+        </div> 
+        <script id="filmTemplate" type="text/template">
+            <img src="images/<%= foto %>" alt="<%= titel %>" />
+            <div class="kol">
+            <h2 data-id="titel"><%= titel %> <small>(<%= filmNr %>)</small></h2>
+            <p data-id="beschrijving"><%= beschrijving %></p>
+            <dl>
+            <dt>regisseur:</dt>
+            <dd data-id="regisseur"><%= regisseur %></dd>
+            <dt>genre:</dt>
+            <dd data-id="genre"><%= genre %></dd>
+            <dt>duurtijd:</dt>
+            <dd data-id="duur"><%= duur %></dd>
+            <dt>release:</dt>
+            <dd data-id="release"><%= release %></dd>
+            <dt>cast:</dt>
+                <dd><ul>
+                    <% _.each(cast, function(item){ %>
+                        <li><%= item.acteur %></li>
+                    <% }) %>
+                </ul></dd>
+            </dl>
+                <button class="delete">verwijder</button>
+            </div>
+        </script>
+    </body>
+</html>
+

@@ -1,0 +1,54 @@
+/* 
+    Document   : style
+    Created on : 6-nov-2013, 13:51:37
+    Author     : jan
+    Description:
+        Purpose of the stylesheet follows.
+*/
+.container {
+    width:50%;
+    margin:0 auto; 
+}
+/* class voor Film model */
+.film{
+	width: 100%;
+        clear:both;
+	padding:1em 0;
+	border-bottom:2px solid silver;
+	}
+
+ .film img {float:left; margin-right:2em;}
+.film .kol {margin-left:12em;}
+.film h2 {margin-top:0;}
+
+.film dl{overflow:auto;width: 100%; list-style:none}
+.film dt{display:inline; width: 30%; clear:left; float:left; font-weight:bold}
+.film dd{display:inline; width: 65%; clear:right; float:right; margin:0}
+.delete {float:right;}
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}

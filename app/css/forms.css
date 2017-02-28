@@ -1,0 +1,132 @@
+/**********************************
+
+algemene form styles
+
+breedte, plaatsing en bg kleuren worden hier niet bepaald
+gebruik daarvoor een local stylesheet 
+
+***********************************/
+form {
+	font-size: 1em;
+	color: #333;
+	padding:1em;
+}
+form div {
+	position:relative;
+	clear: left;
+	display: block;
+	zoom: 1;
+	margin: 0.3em 0 0 0;
+	padding: 0.1em 0.2em;
+}
+/*velden, controls*/
+input[type="email"], 
+input[type="password"], 
+input[type="text"], 
+input[type="url"], 
+input[type="search"], 
+input[type="number"], 
+input[type="tel"],
+textarea {
+	width: 35%;
+	border: 1px solid #999;
+	min-height: 0.875em;
+	padding: 0.4em 0.5em;
+}
+input[type="checkbox"], input[type="radio"] {
+	box-sizing: border-box;
+	padding: 0;
+}
+input.kort{
+	width:7em;
+	}
+input:focus {
+	border: 1px dotted black;
+}
+input.error {
+	border: 1px dotted red;
+}
+select {
+	border: 1px solid #999;
+	padding: 0.2em 0.5em;
+	min-width:7em;
+	}
+textarea{
+	overflow:auto;
+	vertical-align:top;
+	min-height:7em;
+	}
+/* gekleurde buttons*/
+
+button, input[type="button"],input[type="submit"], input[type="reset"]{
+	
+	display: inline-block;
+	padding: 0.3em 1.3em;
+	font-size: 0.875em;			/*14px*/
+	}
+	
+button.blauw,  input[type="button"].blauw, input[type="submit"].blauw, input[type="reset"].blauw{
+	font-weight: bold;
+	color: white;
+	text-align: center;
+	text-shadow: 0 2px 0 #004372;
+	background-color: #005689;
+	border: 1px solid #005689;
+	box-shadow: 0 2px 5px 2px #EDEDED;
+	}
+
+/*labels en berichten*/
+label{
+/* losse labels */
+	float:none;
+	display: inline;	
+	padding:0.3em 0 ;
+	min-height: 0.875em;			/*14px*/	
+	text-align: left;
+}
+
+form label {
+/*labels in form lay-out*/ 	
+	float:left;
+	display: block;	
+	position:relative;
+	width: 25%;
+	margin:0 ;
+}
+form label.compact {
+	display: inline;
+	margin: 0;
+	padding: 4px 10px 0 0;
+	text-indent: 0;
+	width: auto;
+}
+form label.labelCheckbox, label.labelRadio {
+	float: none;
+	display: inline;	
+	zoom: 1;
+	padding: 0;
+	text-align: left;
+}
+form span.fieldval {
+	display:inline-block;
+	float:right;
+	max-width:35%;
+	color: red;
+	font-style: italic
+}
+div.error {
+	display: none;
+}
+abbr.verplicht {
+	color:magenta;
+	font-size:1.3em;
+}
+label.verplicht::before {
+	content: "\2764"; /* hartje */
+	display: inline-block;
+	position:absolute;
+	top:0.4em;
+	left: -1.5em;
+	color:magenta;
+	padding-right: 0.4em; 
+}

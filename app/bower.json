@@ -1,0 +1,14 @@
+{
+  "name": "BB_Movies",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "latest",
+    "modernizr": "latest",
+    "jquery": "latest",
+    "backbone": "latest",
+    "underscore": "latest",
+    "requirejs": "latest",
+    "requirejs-domready": "latest",
+    "backbone.localStorage": "backbone.localstorage#^1.1.16"
+  }
+}
